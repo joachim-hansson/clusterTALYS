@@ -1,0 +1,14 @@
+Package: clusterTALYS
+Type: Package
+Title: TALYS Calculations in Parallel on Cluster
+Version: 0.1.0
+Author: Georg Schnabel
+Maintainer: Georg Schnabel <georg.schnabel@nucleardata.com>
+Description: This package makes use of the package clusterSSH on the client side
+    and the package TALYSeval on the cluster side to execute TALYS calculations
+    in parallel on a cluster. For the types of supported clusters,
+    refer to the documentation of clusterSSH.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
