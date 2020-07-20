@@ -132,7 +132,7 @@ initClusterTALYS <- function(clust, talysExe,
       if (!is.null(curSaveDir)) {
         tarfile <- sprintf("calc.%04d.tar", curCalcIdx)
         saveFilePath <- file.path(curSaveDir, tarfile)
-        tarcmd <- paste0('tar -cf ', tarfile,' *')
+        tarcmd <- paste0('tar -czf ', tarfile,' *')
         movecmd <- paste0('mv ', tarfile, ' ', saveFilePath)
         if (system(tarcmd, intern=FALSE) != 0)
           stop(paste0("Problem with: ", tarcmd))
