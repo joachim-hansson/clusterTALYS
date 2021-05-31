@@ -133,7 +133,7 @@ initClusterTALYS <- function(clust, talysExe,
         tarfile <- sprintf("calc.%04d.tar", curCalcIdx)
         saveFilePath <- file.path(curSaveDir, tarfile)
         tarcmd <- paste0('tar -czf ', tarfile,' *')
-        movecmd <- paste0('mv ', tarfile, ' ', saveFilePath)
+        movecmd <- paste0('rsync --remove-source-files -av ', tarfile, ' ', saveFilePath)
         if (system(tarcmd, intern=FALSE) != 0)
           stop(paste0("Problem with: ", tarcmd))
         if (system(movecmd, intern=FALSE) != 0)
